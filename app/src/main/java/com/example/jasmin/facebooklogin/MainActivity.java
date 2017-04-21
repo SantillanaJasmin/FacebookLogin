@@ -31,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 // App code
-                Toast.makeText(getBaseContext(), loginResult.toString(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, CustomActivity.class);
+                startActivity(intent);
+
+                finish();
             }
 
             @Override
